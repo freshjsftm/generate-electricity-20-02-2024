@@ -1,0 +1,79 @@
+.game-field {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.mills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: -10vw;
+  position: absolute;
+  width: 100%;
+}
+
+.grass {
+  width: 100%;
+  height: 30%;
+  background-image: url('/public/images/Grass.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.lamp {
+  width: 120px;
+  height: 120px;
+  background-image: url('/public/images/Lamp-off.png');
+  background-size: contain;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.isOn {
+  background-image: url('/public/images/Lamp-on.png');
+  background-size: contain;
+}
+
+.timer {
+  color: white;
+  font-size: 40px;
+  /* тут потрібно додати властивості для розташування таймеру праворуч зафіксовано відносно вікна браузера*/
+  position: fixed;
+  right: 40px;
+}
+
+@media screen and (max-width: 1600px) {
+  .mills {
+    margin-top: -4vw;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .mills {
+    margin-top: -1vw;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .grass {
+    height: 50%;
+  }
+
+  .mills {
+    margin-top: 12vw;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .mills {
+    margin-top: 30vw;
+  }
+}
